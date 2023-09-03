@@ -5,9 +5,11 @@ const router = require('./router')
 
 const app = express();
 
-app.use(express.json());
+app.use(express);
 app.use(router);
 app.use(bodyparser.json());
+app.use(bodyparser.urlencoded({ extended: true }));
+
 
 
 
