@@ -3,7 +3,6 @@ const validateBody = (request, response, next) => {
 
     if (body.name == undefined || body.species == undefined || body.sex == undefined || body.castrated == undefined
         || body.alive == undefined || body.adopted == undefined) {
-        console.log(body);
         return response.status(400).json({ message: 'A required field is undefined' }
         );
     }
